@@ -13,15 +13,25 @@ h2{
     padding: 24px 0px;
     text-align: center;
 }
-h2 > span{
-    border: 1px solid;
-    padding: 4px 20px;
-    border-radius: 16px;
-    border-color: #dfdddd;
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 1.1em;
+.have-cash {
+    border: 1px solid #dfdddd;
+    padding: 10px 0px;
+    font-size: 1px;
+    border-radius: 100px;
+    width: 118px;
+    height: 34px;
+    font-family: sans-serif;    
 }
+.have-cash[type='number']{
+      font-size: 34px;
+      text-align: center;
+}
+.have-cash[type=number]::-webkit-inner-spin-button, 
+.have-cash[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 h3{
     display: flex;
     justify-content: center;
@@ -91,16 +101,16 @@ h5{
     font-size: large;
 }
 .quantity{
-    width: 9vh;
+    width: 8vh;
     padding: 7px 0px;
     border: 1px solid;
     border-right-style: none;
     border-left-style: none;
-    border-color: #c8c7c7;
-    background-image: linear-gradient(#c8c7c7,#fdfdfd)
+    background-image: linear-gradient(#c8c7c7,#fdfdfd);
+    text-align: center;
 }
 .pick{
-    border: 1px solid;
+    display: flex;
     border-radius: 13px;
 }
 button.plus {
@@ -124,14 +134,12 @@ button.plus i{
     color: #ffffff;
 }
 
-
-
-
 .quantity::-webkit-inner-spin-button, 
 .quantity::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
+
 @media only screen and (max-width: 800px){
     #items{
         flex-direction: column;
