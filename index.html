@@ -13,7 +13,10 @@
 
 <body>
     <h1>Fruit Shop</h1>
-    <h2>I have Rs. <input class="have-cash" type="number" min="0" value="0"></h2>
+    <div id="total">
+        <h2>I have Rs.</h2>
+        <input onmouseout="haveCash()" class="have-cash" type="number" min="0">
+    </div>
     <h3>Your Total is Rs. <span class="totalbill">0</span></h3>
     <div id="items">
         <div class="item-1">
@@ -22,9 +25,9 @@
                 <img src="images/item-1.PNG" alt="apple">
                 <h5>Apple</h5>
                 <div class="pick">
-                    <button class="plus" onclick="addapple()"><i class="fas fa-plus"></i></button>
-                    <input type="number" class="quantity" min="0" value="0">
-                    <button class="minus" onclick="minusapple()"><i class="fas fa-minus"></i></button>
+                    <button class="plus" onclick="addApple()"><i class="fas fa-plus"></i></button>
+                    <input type="number" class="app-quantity" min="0" value="0">
+                    <button class="minus" onclick="minusApple()"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
         </div>
@@ -34,9 +37,9 @@
                 <img src="images/item-2.PNG" alt="orange">
                 <h5>Orange</h5>
                 <div class="pick">
-                    <button class="plus"><i class="fas fa-plus"></i></button>
-                    <input type="number" class="quantity" min="0" value="0">
-                    <button class="minus"><i class="fas fa-minus"></i></button>
+                    <button onclick="addOrange()" class="plus"><i class="fas fa-plus"></i></button>
+                    <input type="number" class="org-quantity" min="0" value="0">
+                    <button  onclick="minusOrange()" class="minus"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
         </div>
@@ -46,12 +49,16 @@
                 <img src="images/item-3.PNG" alt="banana">
                 <h5>Banana</h5>
                 <div class="pick">
-                    <button class="plus"><i class="fas fa-plus"></i></button>
-                    <input type="number" class="quantity" min="0" value="0">
-                    <button class="minus"><i class="fas fa-minus"></i></button>
+                    <button onclick="addBanana()" class="plus"><i class="fas fa-plus"></i></button>
+                    <input type="number" class="ban-quantity" min="0" value="0">
+                    <button onclick="minusBanana()" class="minus"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="foot">
+        <h6>Copyright © 2019 Syed Aleem Hussain.</h6>
+        <p>All rights reserved.</p>
     </div>
     <script src="script.js"></script>
 </body>
